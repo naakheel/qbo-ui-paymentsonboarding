@@ -1,0 +1,289 @@
+<div class="challenge">
+
+<div class="header table stretch">
+    <div class="tableRow">
+        <div class="tableCell rightDivider"></div>
+        <i role="button" tabindex="0" class="tableCell hi hi-close" data-dojo-attach-event="onclick:trowserExit"></i>
+    </div>
+</div>
+
+<div class="slide" id="business_slide">
+
+    <h1>Tell us about your business</h1>
+    <form id="business_info_form" class="two-col">
+        <fieldset>
+            <div class="row one-up">
+                <div class="field">
+                    <label for="business_name">Business name</label>
+                    <input type="text" id="business_name" name="businessName" data-qbo-bind="value: businessName"
+                           required="required" placeholder="Legal business name">
+                </div>
+            </div>
+            <div class="address-section" data-field="businessAddress" data-phone="businessPhone">
+                <div class="row one-up">
+                    <div class="field address">
+                        <label for="businessAddress_line1">Address line 1</label>
+                        <input type="text" data-type="address" id="businessAddress_line1" name="businessAddress.line1"
+                               data-qbo-bind="value: businessAddress.line1"
+                               required="required" maxlength="30" value="103 Main St" placeholder="Street address">
+                    </div>
+                    <div class="field address2"><label for="businessAddress_line2" class="x-optional">Address line
+                        2</label><input type="text" data-type="address" id="businessAddress_line2"
+                                        data-qbo-bind="value: businessAddress.line2"
+                                        name="businessAddress.line2" maxlength="30" placeholder="Apt / Ste / Unit">
+                    </div>
+                </div>
+                <div class="row zip-phone">
+                    <div class="field zip"><label for="businessAddress_zip">ZIP code</label><input type="text"
+                                                                                                   data-type="zip"
+                                                                                                   id="businessAddress_zip"
+                                                                                                   name="businessAddress.postalCode"
+                                                                                                   data-qbo-bind="value: businessAddress.postalCode"
+                                                                                                   pattern="\d\d\d\d\d"
+                                                                                                   maxlength="5"
+                                                                                                   required="required"
+                                                                                                   value="01952">
+                    </div>
+
+                    <div class="field phone"><label for="businessAddress_phone">Phone</label><input
+                            id="businessAddress_phone" required="required" pattern="^(1 )?\D*[2-9](\d\D*){9}$"
+                            maxlength="14" type="text" data-type="phone" value="(978)462-2301"
+                            placeholder="(XXX) XXX-XXXX" name="businessPhone" data-qbo-bind="value: businessPhone"></div>
+                </div>
+
+                <div class="row city-state other">
+                    <div class="field city"><label for="businessAddress_city">City</label><input type="text"
+                                                                                                 name="businessAddress.city"
+                                                                                                 data-qbo-bind="value: businessAddress.city"
+                                                                                                 class="city"
+                                                                                                 data-type="city"
+                                                                                                 id="businessAddress_city"
+                                                                                                 value="Sunnyvale"
+                                                                                                 required="required">
+                    </div>
+                    <div class="field state"><label for="businessAddress_state">State</label><input type="text"
+                                                                                                    name="businessAddress.state"
+                                                                                                    data-qbo-bind="value: businessAddress.state"
+                                                                                                    class="state"
+                                                                                                    data-type="state"
+                                                                                                    id="businessAddress_state"
+                                                                                                    maxlength="2"
+                                                                                                    pattern="[a-zA-Z]{2}"
+                                                                                                    value="CA"
+                                                                                                    required="required">
+                    </div>
+                </div>
+
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="row one-up">
+                <div class="field"><label for="bank_routing">Bank routing number</label><input type="text"
+                                                                                               id="bank_routing"
+                                                                                               data-type="bankrouting"
+                                                                                               name="bankAccount.routingNumber"
+                                                                                               data-qbo-bind="value: bankAccount.routingNumber"
+                                                                                               required="required"
+                                                                                               pattern="^\d{9}$"
+                                                                                               maxlength="9"
+                                                                                               placeholder="Where to deposit your payments">
+                </div>
+            </div>
+            <div class="row one-up">
+                <div class="field"><label for="bank_account">Bank account number</label><input type="text"
+                                                                                               id="bank_account"
+                                                                                               name="bankAccount.accountNumber"
+                                                                                               data-qbo-bind="value: bankAccount.accountNumber"
+                                                                                               required="required"
+                                                                                               maxlength="17"
+                                                                                               pattern="^\d{4,17}$">
+                </div>
+            </div>
+            <div class="row one-up">
+                <div class="field"><label for="ownership_type">Ownership type</label><select id="ownership_type"
+                                                                                             name="ownershipType"
+                                                                                             data-dojo-type="neo/widgets/Select"
+                                                                                             data-qbo-bind="value: ownershipType"
+                                                                                             style="width:100%"
+                                                                                             required="required">
+                    <option value="">Select</option>
+                    <option value="SOLE_PROPRIETORSHIP">Sole Proprietorship</option>
+                    <option value="NON_PROFIT_ORGANIZATION">Non Profit</option>
+                    <option value="PARTNERSHIP">Partnership</option>
+                    <option value="LIMITED_LIABILITY_CORP">LLC</option>
+                    <option value="CORPORATION">Corporation</option>
+                </select></div>
+            </div>
+            <div class="row one-up">
+                <div class="field"><label for="industry_code">Industry Type</label><select style="width:100%"
+                        required="required" id="industry_code" name="businessCode" data-dojo-type="neo/widgets/Select" data-qbo-bind="value: businessCode">
+                    <option value="">Select</option>
+                    <option value="7629">Appliance Repair Shops</option>
+                    <option value="7217">Carpet, Upholstery Cleaning</option>
+                    <option value="1731">Electrical Contractor</option>
+                    <option value="1520">General Contractors</option>
+                    <option value="7349">Housekeeping Services</option>
+                    <option value="0780">Landscaping</option>
+                    <option value="4214">Local Delivery Services</option>
+                    <option value="4214">Moving, Storage Services</option>
+                    <option value="7342">Pest Control</option>
+                    <option value="1711">Plumbing and HVAC Contractors</option>
+                    <option value="5996">Pool Services &amp; Supplies</option>
+                    <option value="1761">Roofing &amp; Siding</option>
+                    <option value="7393">Security</option>
+                    <option value="1799">Special Trade Contractors (other)</option>
+                    <option value="5714">Windowcovering &amp; Upholstery Stores</option>
+                </select>
+
+                </div>
+            </div>
+
+            <div></div>
+        </fieldset>
+    </form>
+</div>
+<div class="slide" id="owner_slide">
+
+    <h1 class="both-cols">Owner’s information</h1>
+    <form id="owner_info_form" class="two-col">
+        <fieldset>
+            <div class="row one-up">
+                <div class="field fname"><label for="owner_first_name">First name</label><input type="text"
+                                                                                          id="owner_first_name"
+                                                                                          name="businessOwner.firstName"
+                                                                                          data-qbo-bind="value: businessOwner.firstName"
+                                                                                          required="required"
+                                                                                          value=""></div>
+                <div class="field lname"><label for="owner_last_name">Last name</label><input type="text" id="owner_last_name"
+                                                                                        name="businessOwner.lastName"
+                                                                                        data-qbo-bind="value: businessOwner.lastName"
+                                                                                        required="required"
+                                                                                        value=""></div>
+            </div>
+            <div class="row one-up">
+                <div class="field"><input type="checkbox" id="use_business_address"><label
+                        for="use_business_address" style="display: inline;margin-left: 0.5rem;">Same address as company</label></div>
+            </div>
+            <div class="address-section" data-field="businessOwnerAddress" data-phone="businessOwnerPhone">
+                <div class="row one-up">
+                    <div class="field address"><label for="businessOwnerAddress_line1">Address line 1</label><input
+                            type="text" data-type="address" id="businessOwnerAddress_line1"
+                            data-qbo-bind="value: businessOwnerAddress.line1"
+                            name="businessOwnerAddress.line1" required="required" maxlength="30" value=""
+                            placeholder="Street address"></div>
+                    <div class="field address2"><label for="businessOwnerAddress_line2" class="x-optional">Address
+                        line 2</label><input type="text" data-type="address" id="businessOwnerAddress_line2"
+                                             name="businessOwnerAddress.line2" data-qbo-bind="value: businessOwnerAddress.line1"
+                                             maxlength="30" value="" placeholder="Apt / Ste / Unit"></div>
+                </div>
+                <div class="row zip-phone">
+                    <div class="field zip"><label for="businessOwnerAddress_zip">ZIP code</label><input type="text"
+                                                                                                        data-type="zip"
+                                                                                                        id="businessOwnerAddress_zip"
+                                                                                                        name="businessOwnerAddress.postalCode"
+                                                                                                        data-qbo-bind="value: businessOwnerAddress.postalCode"
+                                                                                                        pattern="\d\d\d\d\d"
+                                                                                                        maxlength="5"
+                                                                                                        required="required"
+                                                                                                        value=""><!--div-->
+                    </div>
+                    <!--label-->
+                    <div class="field phone"><label for="businessOwnerAddress_phone">Phone</label><input
+                            id="businessOwnerAddress_phone" required="required" pattern="^(1 )?\D*[2-9](\d\D*){9}$"
+                            maxlength="14" type="text" data-type="phone" value="" placeholder="(XXX) XXX-XXXX"
+                            name="businessOwnerPhone" data-qbo-bind="value: businessOwnerPhone"></div>
+                </div>
+                <div class="row city-state other">
+                    <div class="field city"><label for="businessOwnerAddress_city">City</label><input type="text"
+                                                                                                      name="businessOwnerAddress.city"
+                                                                                                      data-qbo-bind="value: businessOwnerAddress.city"
+                                                                                                      class="city"
+                                                                                                      data-type="city"
+                                                                                                      id="businessOwnerAddress_city"
+                                                                                                      required="required">
+                    </div>
+                    <div class="field state"><label for="businessOwnerAddress_state">State</label><input type="text"
+                                                                                                         name="businessOwnerAddress.state"
+                                                                                                         data-qbo-bind="value: businessOwnerAddress.state"
+                                                                                                         class="state"
+                                                                                                         data-type="state"
+                                                                                                         id="businessOwnerAddress_state"
+                                                                                                         maxlength="2"
+                                                                                                         pattern="[a-zA-Z]{2}"
+                                                                                                         required="required">
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="dob-ssn-section">
+                <div class="row dob one-up">
+                    <div class="field dob date" data-field="businessOwner.dob" data-label="apply.ownerDOB"><label
+                            for="businessOwner_dob_day">Date of birth</label><span class="field month"><select
+                            class="date month" id="businessOwner_dob_month" required="required">
+                        <option value="">Month</option>
+                        <option value="01">1 January</option>
+                        <option value="02">2 February</option>
+                        <option value="03">3 March</option>
+                        <option value="04">4 April</option>
+                        <option value="05">5 May</option>
+                        <option value="06">6 June</option>
+                        <option value="07" selected>7 July</option>
+                        <option value="08">8 August</option>
+                        <option value="09">9 September</option>
+                        <option value="10">10 October</option>
+                        <option value="11">11 November</option>
+                        <option value="12">12 December</option>
+                    </select></span><span class="field day"><input type="text" min="1" max="31" maxlength="2"
+                                                                   class="date day" data-type="date"
+                                                                   id="businessOwner_dob_day" pattern="^\d\d?$"
+                                                                   required="required" placeholder="dd" value="18" ></span><span
+                            class="field year"><input type="text" data-type="date" min="1900" max="2020"
+                                                      maxlength="4" class="date year" id="businessOwner_dob_year"
+                                                      pattern="^\d\d\d\d$" required="required"
+                                                      placeholder="yyyy" value="1946"></span><input type="hidden"
+                                                                                       name="businessOwner.dob"
+                                                                                       required="required"
+                                                                                       pattern="\d\d\d\d-\d\d-\d\d"
+                                                                                       data-error-on="businessOwner_dob_year">
+                    </div>
+                </div>
+                <div class="row one-up">
+                    <div class="field"><label for="ssn">Social Security number</label>
+                            <span class="field"><input
+                                    id="ssn" data-type="ssn" type="text" name="businessOwner.ssn"  data-qbo-bind="value: businessOwner.ssn"
+                                    required="required" pattern="\d\d-\d\d\d-\d\d\d\d" maxlength="11"
+                                    placeholder="XX-XXX-XXXX">
+                            </span>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+</div>
+
+
+<footer id="footer" class="table width100Percent" style="padding:20px" >
+    <div class="tableRow" >
+        <div class="tableCell bottomLeftButtons">
+            <button class="button dark" data-dojo-attach-event="onclick: paymentSignupPlugin">Payment Signup Plugin</button>
+        </div>
+
+        <div class="tableCell bottomRightButtons rightAligned" >
+            <button class="button primary" data-dojo-attach-event="onclick: paymentSignup">Payment Signup</button>
+        </div>
+    </div>
+</footer>
+
+<div id="page_content" style="display:none">
+    <div class="status approved">
+        <div class="status-alert">
+            <p class="p3">Great news!</p>
+        </div>
+        <p class="p1">You’re ready to accept credit cards and bank payments with QuickBooks</p>
+        <p class="p2">Check your email inbox for account details</p>
+    </div>
+</div>
+
+</div>

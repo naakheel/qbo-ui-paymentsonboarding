@@ -1,0 +1,188 @@
+
+@import "variables";
+
+.challenge {
+
+
+  .slide {
+    position: relative;
+    max-width: 980px;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    white-space: normal;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    vertical-align: top;
+    overflow: auto;
+
+    .two-col {
+      display: block;
+      margin-right: 10px;
+      margin-top: 15px;
+      white-space: nowrap;
+    }
+
+    .two-col > * {
+      display: inline-block;
+      vertical-align: top;
+      text-align: left;
+      white-space: normal;
+      width: 40%;
+      margin-right: 10%;
+    }
+
+    .zip {
+      width: calc(4em + 3rem);
+      position: relative;
+      display: inline-block;
+    }
+
+    .phone{
+      width: calc(100% - 1rem - 4em - 3rem);
+      position: relative;
+      display: inline-block;
+      margin-left: 6px;
+    }
+    .address, .fname{
+      position: relative;
+      display: inline-block;
+    }
+
+    .address2, .lname{
+      position: relative;
+      display: inline-block;
+      margin-left: 1rem;
+    }
+
+    .field {
+      margin-top: 5px;
+    }
+
+    .field select {
+      -webkit-appearance: none;
+      text-indent: 1px;
+      text-overflow: '';
+      padding-left: 8px;
+      padding-right: 3.5rem;
+      border-radius: 0.2rem;
+      border-color: #ccc;
+      background-color: #f8f8f8;
+      background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNiIgaGVpZ2h0PSI0NCIgdmlld0JveD0iMCAwIDM2IDQ0Ij48cG9seWdvbiBwb2ludHM9IjI1LDIwIDIwLDI2IDE1LDIwIiBmaWxsPSIjNDg0ODQ4IiAvPjxsaW5lIHN0cm9rZT0iI0VERURFRCIgeDE9IjIuNSIgeTE9IjAiIHgyPSIyLjUiIHkyPSI0NCIvPjxsaW5lIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0VGRUZFRiIgeDE9IjEuNSIgeTE9IjAiIHgyPSIxLjUiIHkyPSI0NCIvPjxsaW5lIG9wYWNpdHk9IjAuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkZGRkZGIiB4MT0iMy41IiB5MT0iMCIgeDI9IjMuNSIgeTI9IjQ0Ii8+PGxpbmUgb3BhY2l0eT0iMC41IiBzdHJva2U9IiNGRkZGRkYiIHgxPSIwLjUiIHkxPSIwIiB4Mj0iMC41IiB5Mj0iNDQiLz48L3N2Zz4=) 100% 50% no-repeat, linear-gradient(to bottom, #ffffff 0%, #f2f2f2 100%) no-repeat;
+      position: relative;
+      width: 100%;
+      height: 32px;
+    }
+
+    div.city {
+      width: calc(100% - 1rem - 3em);
+      position: relative;
+      display: inline-block;
+    }
+
+    .state {
+      width: 3em;
+      position: relative;
+      display: inline-block;
+      margin-left: 3px;
+    }
+
+    label {
+      font-weight: bold;
+      font-size: 1.4rem;
+      margin-bottom: 0.3rem;
+      padding-left: 0.9rem;
+      color: #404040;
+      position: relative;
+      white-space: normal;
+      width: 100%;
+      display: block;
+    }
+
+    span.month {
+      position: relative;
+      display: inline-block;
+      width: calc(100% - 2rem - 3.4rem - 3.5em);
+      min-width: calc(3.5rem + 3em);
+    }
+    span.day {
+      position: relative;
+      display: inline-block;
+      width: calc(1.25em + 1.7rem);
+      margin-left: 0.9rem;
+    }
+
+    span.year {
+      position: relative;
+      display: inline-block;
+      width: calc(2.3em + 1.6rem);
+      margin-left: 1rem;
+    }
+
+    h1 {
+      border-bottom: 1px solid #ccc;
+      font-weight: 300;
+    }
+
+  }
+
+  #page_content {
+    position: absolute;
+    top: 0;
+    bottom: 56px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px 0 20px 40px;
+    overflow-y: auto;
+  }
+  .status {
+    width: 95%;
+    max-width: 45rem;
+    margin: auto;
+    color: #404040;
+  }
+
+  .approved .status-alert{
+    color: #4b9a18;
+    min-height: 6rem;
+    padding-left: 8.5rem;
+    background: 0% 0% no-repeat;
+    background-size: 6rem 6rem;
+    margin-bottom: 5rem;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    font-size: 3.4rem;
+    background-image: url('https://pay-qa.intuit.com/signup/media/images/harmony/checkmark-green.svg');
+    margin-top: 25%;
+  }
+
+  .p1 {
+    margin: 6rem 0;
+    font-size: 2.5rem;
+    font-weight: 200;
+  }
+
+  .p2 {
+    margin: 6rem 0;
+    font-size: 2.1rem;
+    font-weight: 500;
+  }
+
+  .p3 {
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+}
